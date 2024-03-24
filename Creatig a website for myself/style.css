@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Dancing+Script:wght@400;500;600;700&family=Finlandica:wght@400;500;600;700&family=IBM+Plex+Sans:wght@100;200;300;400;500&family=Inconsolata:wght@200;400;600;800&family=Inter:wght@300;400;500;600;700;800;900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --primary-text-color: #fff;
+    --secondary-text-color: #ccc;
+    --padding-inline-section: 20px;
+}
+body{
+    background-color: black;
+}
+ h1{
+    color: white;
+    padding: 3rem;
+}
+.header {
+   min-height: 100vh;
+   width: 100%;
+   position: relative;
+   background-image:  url(H.jpeg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   position: relative;
+}
+nav{
+    display: flex;
+   padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    text-align: right;
+    flex: 1;
+}
+.nav-links ul li{
+    display: inline-block;
+    position: relative;
+    padding: 8px  12px;
+    text-decoration: none;
+}
+.nav-links ul li a{
+    color: white;
+    text-shadow: 0 0 20px  rgb(223, 196, 44);
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 18px;
+}
+.nav-links ul li a:hover{
+    color: #E50914;
+    background-color: transparent;
+    padding: 10%;
+    transition: 0.9s;
+}
+.text-box{
+    width: 90%;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 52px;
+    margin-bottom: -7rem;  
+    color: white;
+}
+.hero-btn{
+    background-color: #E50914;
+    color: white;
+    margin-top: -20rem;
+    border: 2px solid #E50914;
+    padding:10px;
+    font-size: 23px;
+    transition: 0.8s ;
+    text-decoration: none;
+    list-style-type: none;
+}
+.hero-btn:hover{
+    background-color: transparent;
+    color: white;
+    border: 3px solid #E50914;
+    transition: 0.8s ;
+}
+.wrapper{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    background: black;
+}
+.card{
+    width: 280px;
+    height: 360px;
+    padding: 2rem;
+    margin: 40px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    justify-content: space-between;
+
+}
+.card:hover{
+    transform: translate(20px);
+}
+.card:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0 ;
+}
+.card:hover::before{
+    opacity: 1;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0 ;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.card .info h1{
+    margin: 0;
+}
+
+.card .info p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.card .info .btn{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out ;
+}
+/*      TRAVEL SECTION */
+.travel{
+    padding: 30px var(--padding-inline-section) 0;
+    background-color: black;
+}
+
+.travel-feature-container{
+    gap: 30px;
+}
+.feature-img img{
+    width: 50%;
+    background-color: black;
+}
+h2{
+    color: #fff;
+    background-color: black;
+    padding: 1rem;
+    font-size: 3.4rem;
+    text-align: center;
+}
+
+
+/* CARS */
+
+ h5{
+    text-align: center;
+    min-height: 10vh;
+    font-size: 50px;
+    padding: 30px;
+    padding-bottom: -40px;
+    color: white;
+}
+p{
+    color: white;
+    text-align: center;
+}
+.cars{
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+     display: flex;
+}
+.car{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+.car .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+}
+.car .front{
+    transform: perspective(600px) rotateY(0deg);
+     box-shadow: 0 5px 10px black;
+}
+.car .front img{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+.car .front h3{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0,0,0,.4);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+}
+.car .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: black;
+    color: #fff;
+    justify-content: space-between;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 5px 10px black;
+}
+.car .back .link{
+    border-top: 3px solid white;
+    height: 40px;
+    line-height: 50px;
+}
+.car .back .link a{
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+}
+.car:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.car:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* CONTACT FORM*/
+.contact{
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+}
+.contact h6{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+     padding: 40px;
+}
+.contact .name{
+    text-align: center;
+    padding: 20px;
+}
+.name label{
+    font-weight: 700;
+    padding: 16px;
+    font-size: 19p;
+}
+.name input{
+    border: none;
+    font-size: 18px;
+    
+}
+.contact .email{
+    text-align: center;
+    padding: 20px;
+}
+.email label{
+    font-weight: 700;
+    padding: 16px;
+}
+.email input{
+    border: none;
+    font-size: 18px;
+}
+.button  {
+    background-color: #E50914;
+    text-align: center;
+    margin-left: 610px;
+    min-height: 5vh;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    color: white;
+}
+.button:hover{
+    background: transparent;
+    border: 2px solid #E50914;
+    transition: 0.5s;
+}
+
+/* FOOTER SECTION STARTS */
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a {
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    opacity: 0.9;
+}
+
+/* Hover Effect */
+.socialIcons a:hover{
+    background-color: black;
+    transition: 1s;
+}
+.socialIcons i:hover{
+    color: white;
+    transition: 0.9s;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+.footerNav ul li{
+    padding: 20px;
+    margin: 10px;
+}
+.footerNav ul li a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+.footerNav ul li a:hover{
+    color: #E50914;
+}
+.footerbottom p span{
+        font-weight: 900;
+        color: #E50914;
+}
